@@ -1,0 +1,8 @@
+<div class="twowayBinding">
+  <label for="username">Username</label>
+  <input name="username" type="text" [(ngModel)]="person.username"/> {{person.username}} <br/>
+  <label for="password">Password </label>
+  <input name="password" type="text" [(ngModel)]="person.password"/>  {{person.password}}<br/>
+  <button (click)="logUsernameAndPassword()">Go</button>
+
+</div>

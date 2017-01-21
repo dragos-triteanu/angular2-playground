@@ -1,0 +1,18 @@
+<div class="onewayBinding">
+  <h3>String/Number interpolation</h3>
+  <p>
+    String : {{stringInterpolation}}
+  </p>
+  <p>
+    Number : {{numberInterpolation}}
+  </p>
+  <h3>Property interpolation</h3>
+  <input type="text" [value]="stringInterpolation" />
+  <p [ngClass]="{redBorder : getHasRedBorder()}">
+    Bordered text
+  </p>
+  <h3>Custom bindable property</h3>
+  Should be 10 from value given in app.component:{{bindableProperty}}
+
+</div>
+

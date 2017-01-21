@@ -1,0 +1,20 @@
+<h2>Passing content to a component using ng-content</h2>
+<other-component><div>This Div comes as a parameter</div></other-component>
+
+<!-- DATABINDING example-->
+<h2>One way databinding</h2>
+<app-databinding [bindableProperty]="10"></app-databinding>
+
+<h2>Event binding</h2>
+<app-event-binding (customeEvent)="onCustomeEvent($event)"></app-event-binding>
+
+<h2>Twoway databinding</h2>
+<app-twoway-binding></app-twoway-binding>
+
+<h2>Lifecycle</h2>
+<app-lifecycle></app-lifecycle>
+
+<h2>View child</h2>
+<app-view-child><div #boundContent></div></app-view-child>
+
+
