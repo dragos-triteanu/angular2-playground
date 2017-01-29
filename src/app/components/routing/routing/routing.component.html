@@ -1,0 +1,31 @@
+<div class="routing">
+  <h2>Router outlet</h2>
+  <hr>
+  <router-outlet></router-outlet>
+  <hr>
+  <h2>Simple links</h2>
+  <a [routerLink]="''">Home</a>
+  <a [routerLink]="'/another'">Another</a>
+  <h2>Programatic navigation</h2>
+  <button (click)="goTo()">Programatic navigation</button>
+  <br/>
+  <br/>
+  <h2>Passing path parameter to a page</h2>
+  <input type="text" #pathParam (input)="'someName'"/>
+  <a [routerLink]="['another',pathParam.value]">Pass Path Param</a>
+  <h2>Pass query params</h2>
+  <button (click)="navigateWithParams()">Pass query params</button>
+  <a [routerLink]="'/another'" [queryParams]="{queryParam: 'From link'}">From link</a>
+  <h2>Link styling for active</h2>
+  <a [routerLink]="''" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a [routerLink]="'/another'" routerLinkActive="active">Another</a>
+  <h2>Styling container of link</h2>
+  <div routerLinkActive="akta" [routerLinkActiveOptions]="{exact:true}">
+    <a [routerLink]="''" >Home</a>
+  </div>
+  <a [routerLink]="'/another'" routerLinkActive="active">Another</a>
+  <h2>Path guarding by canActivate</h2>
+  <a [routerLink]="'/guarded'">Guarded path</a>
+  <router-outlet></router-outlet>
+  <h2>Path guarding by canDeactivate</h2>
+</div>

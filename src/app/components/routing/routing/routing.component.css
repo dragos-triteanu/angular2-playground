@@ -1,0 +1,11 @@
+.routing {
+  border: 1px solid darkgray;
+}
+
+.active{
+  color: darkred;
+}
+
+.akta{
+  background-color: black;
+}
